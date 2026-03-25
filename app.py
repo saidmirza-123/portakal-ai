@@ -6,7 +6,7 @@ app = Flask(__name__)
 
 # --- AYARLAR ---
 # Buraya Google'dan aldığın API anahtarını yaz
-API_KEY = "GOOGLE_API_KEY" 
+API_KEY = os.getenv("GOOGLE_API_KEY")
 genai.configure(api_key=API_KEY)
 model = genai.GenerativeModel('gemini-1.5-flash')
 
